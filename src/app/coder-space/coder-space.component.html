@@ -1,0 +1,55 @@
+<div class="body1">
+  <section class="blog">
+    <h2>CoderSpace</h2>
+    <p>Welcome to present</p>
+    <p>
+      Coderspace'de şirketler adaylara başvurur! Yazılımcılar, data scientistler Coderspace profilleriyle kendileri için
+      en iyi şirketlerde çalışır.
+    </p>
+  </section>
+  @if (isLoading) {
+    <div class="flex justify-center  h-screen">
+  <div class="animate-spin rounded-full h-64 w-64 border-t-2 border-b-2 border-white"></div>
+</div>
+
+
+  } @else {
+    <div class="center " style="margin-top: 100px">
+      @for (coder of coderList; track coder.name) {
+
+        <div class="card">
+          <div class="additional">
+            <div class="user-card">
+              <img width="150" height="160"
+                   src="./assets/logo-mor-white-removebg-preview.png" role="img"
+                   aria-labelledby="title desc" class="svgcenter" alt=""/>
+            </div>
+            <a target=”_blank” (click)="openLink(coder.id)" href="{{ coder.link }}">
+
+              <div class="more-info">
+
+                <h2 class="field-name">{{ coder.name }}</h2>
+                <div class="coords">
+
+                  <span>{{ coder.deadline }}</span>
+                </div>
+                <div class="coords-type">
+
+                  <span>{{ coder.eventType }}</span>
+                </div>
+
+              </div>
+            </a>
+
+          </div>
+          <div class="general">
+            <img style="width: 500px; max-height: 100%;"
+                 src="{{coder.imgUrl}}" role="img"
+                 aria-labelledby="title desc" class="svgcenter" alt=""/>
+          </div>
+        </div>
+
+      }
+    </div>
+  }
+</div>

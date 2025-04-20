@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+.body1 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:  linear-gradient(
+    to bottom,
+    rgba(83, 81, 81, 0.9),
+    rgba(50, 50, 50, 0.9),
+    rgba(23, 23, 23, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
+  width: 100%;
+  overflow: hidden;
+
+}
+.blog p {
+  font-size: clamp(1rem, 6vw, 1.3rem);
+  color: white;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.general p,.general h1{
+  font-family: "Comfortaa", cursive;
+}
+
+.svgcenter{
+
+  width: 100%;
+  border-bottom-right-radius: 3rem;
+  border-top-right-radius: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+.center {
+
+  display: flex;
+
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: center;
+}
+.blog {
+  position: relative;
+  padding: 7.5rem 9.375rem 1.25rem;
+  background: transparent;
+}
+
+
+
+.blog h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: white;
+  margin: 3.75rem 0 2.5rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  width: 40.625rem;
+  height: 15.625rem;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #cab9b9);
+  box-shadow: 0 0.5rem 1rem -0.5rem rgba(0,0,0,0.4);
+  border-radius: 3.125rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: relative;
+  width: 9.375rem;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(253, 143, 14),
+    rgb(228, 128, 16),
+    rgb(216, 107, 20),
+    rgb(211, 100, 18)
+  );
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card.green .additional {
+  background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 0.313rem 0.313rem 0;
+}
+
+.card .additional .user-card {
+  width: 9.375rem;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -0.125rem;
+  height: 80%;
+  border-left: 0.125rem solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 6.25rem;
+  white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+  top: 85%;
+}
+
+.card .additional .user-card svg {
+  top: 50%;
+}
+
+.card .additional .more-info {
+  width: 31.25rem;
+  float: left;
+  position: absolute;
+  left: 9.375rem;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+  color: #224C36;
+}
+
+.card .additional .coords {
+  padding: 0.625rem;
+  padding-top: 2rem;
+  position: relative;
+
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card.green .additional .coords {
+  color: #325C46;
+}
+
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card.green .additional .stats {
+  color: #325C46;
+}
+
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card .additional .stats i {
+  display: block;
+}
+
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card .general {
+
+
+  width: 31.25rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+
+.card .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1rem;
+}
+.field-name {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Başlıkta gösterilecek satır sayısı */
+  overflow: hidden;
+}
+
+

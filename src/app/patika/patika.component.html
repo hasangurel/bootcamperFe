@@ -1,0 +1,62 @@
+<div class="body1">
+  <section class="blog">
+    <h2>Patika</h2>
+    <p>Welcome to past</p>
+    <p>
+      Patika.dev offers exclusive, high-quality, hands-on online career paths in the most sought-after areas; Advance
+      successfully, gain priority access to our programs, and get connected to our partner employers for job placement.
+    </p>
+  </section>
+  @if (isLoading) {
+    <div class="flex justify-center  h-screen">
+      <div class="animate-spin rounded-full h-64 w-64 border-t-2 border-b-2 border-white"></div>
+    </div>
+
+
+  } @else {
+    <div class="center " style="margin-top: 6.25rem">
+      @for (patika of patikaList; track patika.name) {
+
+
+        <div class="card">
+
+          <div class="additional">
+            <div class="user-card">
+              <img width="150" height="160"
+                   src="./assets/%5Bremoval.ai%5D_b3a91aa6-80b5-466d-95fd-81517b25f86d-dgjguipj_400x400.png" role="img"
+                   aria-labelledby="title desc" class="svgcenter" alt=""/>
+            </div>
+
+
+            <a target=”_blank” (click)="openLink(patika.id)" href="{{ patika.link }}">
+              <div class="more-info">
+                <h2 class="field-name">{{ patika.name }}</h2>
+                <div class="coords">
+                  <span>Group Name</span>
+                  <span>{{ patika.deadline }}</span>
+                </div>
+                <div class="coords">
+                  <span>Position/Role</span>
+                  <span>{{ patika.location }}</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="general">
+
+            <img
+
+              src="{{patika.imgUrl}}" role="img"
+              aria-labelledby="title desc" class="svgcenter" alt=""/>
+
+          </div>
+
+
+        </div>
+      }
+
+
+    </div>
+  }
+</div>

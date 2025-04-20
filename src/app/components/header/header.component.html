@@ -1,0 +1,21 @@
+<header id="header" class="top-0 left-1/2  w-full  text-white  transition-opacity duration-500 "  [ngClass]="{'scrolled': isScrolled}">
+  <ul class="navigation ">
+    <a routerLink="">
+      <img class=" h-40 w-40  align-middle top-0 " src="assets/Bootcamper_transparent.png" alt="Logo">
+    </a>
+    <li><a routerLink="" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+    @if (!islogin()) {
+      <li><a routerLink="login" routerLinkActive="router-link-active"
+             [routerLinkActiveOptions]="{exact: true}">Login</a></li>
+      <li><a routerLink="register" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Register</a>
+      </li>
+    } @else {
+      <li><a routerLink="profile" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Profile</a>
+      </li>
+      <li><a (click)="logout()" routerLink="">Logout</a></li>
+    }
+  </ul>
+
+
+</header>
+

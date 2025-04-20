@@ -1,0 +1,33 @@
+<div class=" body1">
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+      <h2>Login</h2>
+      <div class="inputBx">
+        <input type="email" placeholder="E-mail"  (keydown.enter)="getToken()" id="email" name="userId" [(ngModel)]="authUserRequest.email"
+               class="mt-1 p-2 block w-full border rounded-md shadow-sm">
+      </div>
+      <div class="inputBx">
+
+        <input type="password" placeholder="Password" (keydown.enter)="getToken()" [(ngModel)]="authUserRequest.password">
+      </div>
+      <div class="inputBx">
+
+        <input (click)="getToken()"  type="submit" value="Sign in">
+
+
+      </div>
+      <div class="links">
+
+        <a href="#">Forget Password</a>
+        <a routerLink="../register">Signup</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

@@ -1,0 +1,63 @@
+@if (user) {
+  <div class="profile-page sidebar-collapse h-screen">
+    <div class="wrapper">
+      <div class="page-header clear-filter">
+        <div class="page-header-image" data-parallax="true">
+        </div>
+        <div class="container">
+          <div class="photo-container">
+            <img
+              src="assets/Lovepik_com-450013052-Businessman%20Avatar%20Profile%20Vector%20.png"
+              alt="">
+          </div>
+          <h3 class="title">{{ user.email }} </h3>
+          <p class="category">{{ user.name }}</p>
+          <div class="content">
+            <div class="social-description">
+              <h2>{{ Counter }}</h2>
+              <h3>Bootcamps Counter</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+            </div>
+            <div class="tab-content gallery">
+              <div class="tab-pane active" id="home" role="tabpanel">
+                <div class="col-md-12 flex-auto ml-auto mr-auto">
+                  <div class="row">
+                    @for (patika of patikaList; track patika.name) {
+                      <div class="col-md-4 p-3  ">
+                        <a href="{{ patika.link }}">
+                          <img src="{{ patika.imgUrl}}" alt="" class="img-raised">
+                        </a>
+                      </div>
+                    }
+                    @for (patika of coderList; track patika.name) {
+                      <div class="col-md-4 p-3 ">
+                        <a href="{{ patika.link }}">
+                          <img src="{{ patika.imgUrl}}" alt="" class="img-raised">
+                        </a>
+                      </div>
+                    }
+                    @for (patika of Techlist; track patika.name) {
+                      <div class="col-md-4 p-3 ">
+                        <a href="{{ patika.link }}">
+                          <img src="{{ patika.imgUrl}}" alt="" class="img-raised">
+                        </a>
+                      </div>
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+}

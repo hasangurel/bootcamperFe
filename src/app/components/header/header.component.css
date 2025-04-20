@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mooli&display=swap");
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+#header.scrolled {
+  opacity: 0;
+  padding: 0.5rem; /* Kaydırıldığında iç kenar boşluğu */
+}
+
+@media (max-width: 75rem) {
+  header {
+    padding: 1.5rem 2.5rem;
+  }}
+
+@media (max-width: 30rem) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
+}
+
+.body2 {
+  overflow-x: hidden;
+  background: #111;
+  font-family: "Mooli", sans-serif;
+}
+
+
+.logo {
+
+  color: white;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 6vw, 1.7rem);
+  text-decoration: none;
+}
+
+.navigation {
+
+
+  display: flex;
+  font-size: xxx-large;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 0.03rem 0.75rem;
+  color: white;
+  border-radius: 1rem;
+  font-size: clamp(0.9rem, 6vw, 1rem);
+}
+
+.navigation li a:hover,
+.router-link-active {
+  background: #112434;
+  color: #fff;
+}
+.navigation li a.active {
+  background: #112434;
+  color: #fff;
+}
+
+.navigation.fade {
+  background-color: rgba(51, 51, 51, 0.7); /* Scroll ile değiştirilecek arkaplan rengi */
+}

@@ -1,0 +1,52 @@
+<div class="body1">
+  <section class="blog">
+    <h2>TechCareer</h2>
+    <p>Welcome to future</p>
+    <p>
+      Teknoloji alanında kariyer hedefliyorsan sene içerisinde mezun olacak, yeni mezun veya son bir kaç sene içerisinde
+      mezun olmuş ve tam zamanlı bir işte çalışmıyorsan,
+      İlgi alanın yazılım teknolojileri, veri bilimi, ürün yönetimi gibi bilişim alanındaki konularda olup kariyer
+      patikasını teknoloji odaklı değiştirmek istiyorsan,
+      Yazılım kariyerine yeni başlamış ancak güncel teknolojiler ile daha da gelişmek istiyorsan,
+      Ücretsiz bootcamp programlarımıza başvurabilirsin!
+    </p>
+  </section>
+  @if (isLoading) {
+    <div class="flex justify-center  h-screen">
+      <div class="animate-spin rounded-full h-64 w-64 border-t-2 border-b-2 border-white"></div>
+    </div>
+
+
+  } @else {
+  <div class="center " style="margin-top: 100px">
+
+    <div *ngFor=" let tech of Techlist" class="card">
+      <div class="additional">
+        <div class="user-card">
+          <img width="100" height="100"
+               src="/assets/img.png" role="img"
+               aria-labelledby="title desc" class="svgcenter" alt=""/>
+        </div>
+          <a target=”_blank” (click)="openLink(tech.id)" href="{{ tech.link }}">
+          <div class="more-info">
+            <h2 class="field-name">{{ tech.name }}</h2>
+            <div class="coords">
+
+              <span>{{ tech.deadline }}</span>
+            </div>
+            <div class="coords-type">
+              <span>{{ tech.eventType }}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="general">
+        <img style="width: 500px; max-height: 100%;"
+             src="{{tech.imgUrl}}" role="img"
+             aria-labelledby="title desc" class="svgcenter" alt=""/>
+
+      </div>
+    </div>
+
+  </div>}
+</div>
